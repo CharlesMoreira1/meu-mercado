@@ -11,7 +11,7 @@ ext {
     roomVersion = "2.3.0"
 
     ktlintVersion = "10.1.0"
-    detektVersion = "1.17.0"
+    detektVersion = "1.17.1"
 
     composeVersion = "1.0.0-rc01"
     composeUiTooling = "1.0.0-beta09"
