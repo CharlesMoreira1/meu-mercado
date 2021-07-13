@@ -1,0 +1,21 @@
+apply plugin: "com.android.application"
+apply from: "$rootDir/config/android-settings.gradle"
+
+android {
+    defaultConfig {
+        applicationId versionControl.applicationId
+    }
+}
+
+dependencies {
+    implementation deps.ktx
+    implementation deps.appCompat
+    implementation deps.material
+    implementation deps.composeUI
+    implementation deps.composeUiTooling
+    implementation deps.composeMaterial
+    implementation deps.composeActivity
+    testImplementation testDeps.jUnit
+    androidTestImplementation testDeps.jUnitExt
+    androidTestImplementation testDeps.composeTest
+}

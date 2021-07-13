@@ -1,0 +1,48 @@
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+apply plugin: "org.jlleitschuh.gradle.ktlint"
+apply plugin: "io.gitlab.arturbosch.detekt"
+
+android {
+    compileSdkVersion versionControl.compileSdk
+
+    defaultConfig {
+        minSdkVersion versionControl.minSdk
+        targetSdkVersion versionControl.targetSdk
+        versionCode versionControl.versionCode
+        versionName versionControl.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        useIR = true
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion composeVersion
+    }
+
+    ktlint {
+        reporters {
+            reporter "checkstyle"
+            reporter "plain"
+        }
+    }
+}

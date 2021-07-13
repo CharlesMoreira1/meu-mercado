@@ -1,0 +1,20 @@
+buildscript {
+    apply from: "config/dependencies.gradle"
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { url repo.gradleUrl }
+    }
+
+    dependencies {
+        classpath gradleDeps.buildGradle
+        classpath gradleDeps.kotlinGradle
+        classpath gradleDeps.ktlint
+        classpath gradleDeps.detekt
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
