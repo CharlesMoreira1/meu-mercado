@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Setup checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build the app
         run: ./gradlew build
@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Setup checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Run unit tests
         run: ./gradlew test
@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Setup checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Check code formatting
         run: ./gradlew ktlintCheck
@@ -79,7 +79,7 @@ jobs:
     needs: [unitTests, staticAnalysis]
     steps:
       - name: Setup checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup ruby
         uses: actions/setup-ruby@v1

@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Setup checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build debug apk
         run: ./gradlew clean assembleDebug
