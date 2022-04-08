@@ -87,25 +87,25 @@ jobs:
           ruby-version: 2.6
 
       - name: Download code formatting
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: Artifact ktlint
           path: '**/reports/ktlint/ktlintMainSourceSetCheck/'
 
       - name: Download code smells
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: Artifact detekt
           path: '**/reports/detekt/'
 
       - name: Download android lint
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: Artifact android lint
           path: '**/reports/'
 
       - name: Download unit tests
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: Artifact unit tests
           path: '**/test-results/**/'
