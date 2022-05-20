@@ -28,7 +28,7 @@ jobs:
 
       - name: Upload unit tests
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: Artifact unit tests
           path: '**/test-results/**/'
@@ -45,7 +45,7 @@ jobs:
 
       - name: Upload code formatting
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: Artifact ktlint
           path: '**/reports/ktlint/ktlintMainSourceSetCheck/'
@@ -56,7 +56,7 @@ jobs:
 
       - name: Upload code smells
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: Artifact detekt
           path: '**/reports/detekt/'
@@ -67,7 +67,7 @@ jobs:
 
       - name: Upload android lint
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: Artifact android lint
           path: '**/reports/'
