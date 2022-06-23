@@ -5,7 +5,7 @@ ext {
     materialVersion = "1.4.0"
     buildGradleVersion = "7.0.0-beta05"
 
-    coroutinesVersion = "1.5.1-native-mt"
+    coroutinesVersion = "1.6.3-native-mt"
 
     koinVersion = "3.1.2"
     roomVersion = "2.3.0"
